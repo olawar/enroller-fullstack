@@ -38,13 +38,13 @@
             logout() {
                 this.authenticatedUsername = '';
             },
-            register() {
+            register(user) {
               console.log('register');
-              //  this.$http.post('participants', user)
-              //   .then(response => {
-              //       // udało się
-              //   })
-              //   .catch(response => {/* nie udało się */});
+               this.$http.post('participants', user)
+                .then(response => {
+                    // udało się
+                })
+                .catch(response => {/* nie udało się */});
             }
         }
     };
